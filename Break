@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+struct player_s{
+	string name;
+	string job;
+	string Lane;
+};
+
+int main(){
+	player_s player[] = {
+		{
+			"Kadita", "Mage", "Mid Lane",
+		},
+		{
+			"Kagura", "Mage", "Mid Lane",
+		},
+		{
+			"Clint", "Marksman", "Gold Lane",
+		},
+		{
+			"Yi-Shun-Shi", "Marksman", "Gold Lane",
+		},
+		{
+			"Hayabusa", "Assassin", "Gold Lane",
+		},
+	};
+	
+	cout << "Who is player assassin?\n\n";
+	
+	for (int i = 0; i < 5; i++){
+		if (player[i].job == "Assassin"){
+			cout << player[i].name << endl;
+			break;
+		}
+		
+	}
+	
+	return 0;
+}
