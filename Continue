@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+struct fruits{
+	string name;
+	string vitamins;
+	string colour;
+};
+
+int main(){
+	fruits fruit[] = {
+		{
+			"Orange",
+			"Vitamin C",
+			"Orange",
+		},
+		{
+			"Apple",
+			"Vitamin C",
+			"Red",
+		},
+		{
+			"Watermelon",
+			"Vitamin A",
+			"Green",
+		},
+		{
+			"Grape",
+			"Vitamin A",
+			"Purple",
+		},
+		{
+			"Papaya",
+			"Vitamin C",
+			"Orange",
+		},
+		{
+			"Guava",
+			"Vitamin C",
+			"Green",
+		},
+	};
+	
+	int fruitsnotincludevitaminC = 2;
+	
+	cout << "What fruits do not contain vitamin C?\n\n";
+	
+	for (int i = 0; i < 6; i++){
+		if (fruit[i].vitamins == "Vitamin C"){
+			continue;
+		}
+		cout << fruit[i].name << endl;
+	}
+	
+	return 0;
+}
